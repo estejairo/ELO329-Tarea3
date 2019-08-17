@@ -19,7 +19,7 @@ CPP_DEPS += \
 
 %.o: ./%.cpp
 	g++ -std=gnu++11 -c -MMD -MP -MF "$(@:%.o=%.d)" -MT "$(@)" -o "$@" "$<"
-	@echo $< "compilado ejecutado sin problemas."
+	@echo $< "compilado sin problemas."
 
 all: TestStage1
 
