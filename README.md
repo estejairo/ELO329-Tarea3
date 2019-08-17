@@ -16,6 +16,7 @@ Se recomienda utilizar el código en el mismo entorno que fue diseñado, el cual
 Cada etapa es compilada y ejecutada de manera independiente. Para compilar una etapa, es necesario ejecutar el comando "make" en consola.
 Para ejecutar cada programa, basta con escribir el comando "make run".
 Si se desean eliminar los archivos de copilación y ejecución generados anteriormente, se puede ejecutar "make clean".
+Para el caso particular del Stage1, el cual requiere como datos de entrada el numero de ciclos N y el tiempo de luz roja redTime, estos están previamente definidos dentro de su makefile y son configurables editando estas variables al comienzo de este archivo.
 
 ## Autores
 
