@@ -1,4 +1,4 @@
-# Tarea 2: Aplicación Gráfica para Semáforos de Intersección
+# Tarea 3: Semáforos como objeto de software en C++
 
 Este repositorio contiene codigo fuente que simula el comportamiento de los semaforos presentes en una intersección vial. Se separa en 4 etapas incrementales, donde la primera etapa corresponde a a un solo semáforo de 3 luces; la segunda etapa representa un semáforo peatonal con botonera para solicitar el cruce; la tercera etapa incluye una luz de giro y su respectivo botón para activarla; la cuarta etapa es la integracion de todos los semaforos en la interseccion vial, con tres semáforos de 3 luces, 2 semáforos de giro y 2 semáforos peatonales.
 
