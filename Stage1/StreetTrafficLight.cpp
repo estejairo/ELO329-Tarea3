@@ -1,12 +1,4 @@
-#include "TrafficLight.cpp"
-class StreetTrafficLight: public TrafficLight
-{
-private:
-    /* data */
-public:
-    StreetTrafficLight(int tf,int tt);
-    ~StreetTrafficLight();
-};
+#include "StreetTrafficLight.h"
 
 StreetTrafficLight::StreetTrafficLight(int tf,int tt):TrafficLight(tf,tt){
 }

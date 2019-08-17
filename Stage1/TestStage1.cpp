@@ -1,5 +1,5 @@
 #include<iostream>
-#include "StreetTrafficLight.cpp"
+#include "StreetTrafficLight.h"
 #include <string>
 #include <thread>
 #include <chrono>
