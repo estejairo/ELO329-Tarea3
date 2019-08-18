@@ -5,10 +5,10 @@ void concurrentTask(MyTimer *t) {
    while (!t->done){
       this_thread::sleep_for(chrono::milliseconds(t->period));
       if (t->running)
-         t->listener.actionPerformed();
+         t->listener->actionPerformed();
    }
 }
-MyTimer::MyTimer(int p, Listener &lis) :
+MyTimer::MyTimer(int p, Listener* lis) :
             period(p), listener(lis), thread(concurrentTask, this)  {//p in ms
    running = true;
 }

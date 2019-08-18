@@ -4,7 +4,8 @@
 #include <chrono>
 #include "SimuladorEntradas.cpp"
 #include "Controlador.cpp"
-#include "MyTimer.h"
+#include "MyTimer.cpp"
+
 using namespace std;
 int main (int argc, char* argv[]){
     if(argc != 2){
@@ -16,14 +17,18 @@ int main (int argc, char* argv[]){
         int blinkingTime = 10;
         try{
             SemaforoP semaforop = SemaforoP(greenTime, blinkingTime);
-            DetectorDeRequerimiento botont;
+            DetectorDeRequerimiento *botont = new DetectorDeRequerimiento();
             Controlador ctrl = Controlador(semaforop,botont);
-            SimuladorEntradas entradas=SimuladorEntradas(botont,filename);
+            SimuladorEntradas *entradas = new SimuladorEntradas(botont, filename);
+            //SimuladorEntradas entradas;
             //TIMER
             //El archivo se lee cada 1000 milisegundos segun lo definido en los metodos de SimuladorEntradas
             MyTimer timer = MyTimer(1000, entradas);
             //timer.resume();//Comienza la lectura en paralelo
             ctrl.manageTraffic();//Se opera el semaforo, atento a las señales del sensor
+            timer.stop();
+            delete entradas;
+            delete botont;
         }catch (...){
             cout<<"Error"<<endl;
             exit(0);

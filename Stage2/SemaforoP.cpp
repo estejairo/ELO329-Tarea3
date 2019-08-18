@@ -31,6 +31,7 @@ SemaforoP::SemaforoP(){
 SemaforoP::SemaforoP(int greenTime, int blinkingTime)
 {
     red=true;
+    green=false;
     greenT=greenTime;
     blinkT=blinkingTime;
 }
@@ -58,13 +59,13 @@ int SemaforoP::getBlinkingTime(){
 }
 std::ostream& operator<<(std::ostream& o, const SemaforoP& sem){
     if(sem.green){
-        return o << "1";
+        return o << "V";
     }
     else if(sem.red){
-        return o << "0";
+        return o << "R";
     }
     else{
-        return o << " ";
+        return o << "P";
     }
     
 

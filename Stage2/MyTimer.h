@@ -5,7 +5,7 @@
 using namespace std;
 class MyTimer: public thread {
 public:
-   MyTimer(int period, Listener &listener);
+   MyTimer(int period, Listener *listener);
    void resume();
    void pause();
    bool isRunning();
@@ -13,7 +13,8 @@ public:
    friend void concurrentTask(MyTimer *t);
 private:
    int period;
-   bool running, done;
-   Listener &listener;
+   bool running;
+   bool done=false;
+   Listener *listener;
 };
 #endif
