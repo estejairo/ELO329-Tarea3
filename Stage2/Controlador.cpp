@@ -1,17 +1,5 @@
-#include "SemaforoP.cpp"
-#include <thread>
-#include <chrono>
-#include <exception>
-class Controlador
-{
-private:
-    SemaforoP semP;
-    DetectorDeRequerimiento *boton;
-public:
-    Controlador(SemaforoP smp, DetectorDeRequerimiento *btn);
-    ~Controlador();
-    void manageTraffic();
-};
+#include "Controlador.h"
+
 
 Controlador::Controlador(SemaforoP smp,DetectorDeRequerimiento *btn){
     semP=smp;
