@@ -1,23 +1,5 @@
-#include <string>
-#include "DetectorDeRequerimiento.cpp"
-#include <thread>
-#include <chrono>
-#include "Listener.h"
-#include <fstream>
-using namespace std;
+#include "SimuladorEntradas.h"
 
-class SimuladorEntradas: public Listener{
-
-private:
-    DetectorDeRequerimiento *sensorinductivo;
-    string filename;
-    string linea;
-    ifstream file;
-public:
-    ~SimuladorEntradas();
-    SimuladorEntradas(DetectorDeRequerimiento *sensind, std::string flnm);
-    void actionPerformed();
-};
 SimuladorEntradas::~SimuladorEntradas(){
 
 }
@@ -40,7 +22,6 @@ void SimuladorEntradas::actionPerformed() {
         file.close();
         exit(0);
     }
-
 }
 
 

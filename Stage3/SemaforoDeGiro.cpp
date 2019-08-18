@@ -3,11 +3,11 @@
 //  El siguiente codigo implementa un semaforo de 2 luces, para representar 
 //  un semaforo peatonal. Incluye métodos para cambio de luz,
 //  para solicitar el tiempo de encendido y para imprimir el
-//  estado actual del semaforo. "1" significa luz verde encendida, y 
-//  "0" signifiva luz verde apagada
+//  estado actual del semaforo. 
 //
 ////////////////////////////////////////////////////////////////
-#include <iostream>
+#include "SemaforoDeGiro.h"
+
 class SemaforoDeGiro
 {
 private:
@@ -28,6 +28,7 @@ public:
 SemaforoDeGiro::SemaforoDeGiro(){
 
 }
+
 SemaforoDeGiro::SemaforoDeGiro(int greenTime, int blinkingTime)
 {
     red=true;
@@ -39,24 +40,29 @@ SemaforoDeGiro::SemaforoDeGiro(int greenTime, int blinkingTime)
 SemaforoDeGiro::~SemaforoDeGiro()
 {
 }
+
 void SemaforoDeGiro::turnRedLightOn(){
     red=true;
     green=false;
 
 }
+
 void SemaforoDeGiro::turnGreenLightOn(){
     green=true;
     red=false;
 }
+
 void SemaforoDeGiro::turnGreenLightOff(){
     green=false;
 }
+
 int SemaforoDeGiro::getGreenLightTime(){
     return greenT;
 }
 int SemaforoDeGiro::getBlinkingTime(){
     return blinkT;
 }
+
 std::ostream& operator<<(std::ostream& o, const SemaforoDeGiro& sem){
     if(sem.green){
         return o << "V";
@@ -67,6 +73,4 @@ std::ostream& operator<<(std::ostream& o, const SemaforoDeGiro& sem){
     else{
         return o << "P";
     }
-    
-
 }

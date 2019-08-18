@@ -1,18 +1,4 @@
-#include <iostream>
-
-
-class DetectorDeRequerimiento
-{
-private:
-    bool state;
-    //friend std::ostream& operator<<(std::ostream& o, const DetectorDeRequerimiento& a);
-public:
-    DetectorDeRequerimiento();
-    bool isOn();
-    void setOn();
-    void setOff();
-
-};
+#include "DetectorDeRequerimiento.h"
 
 DetectorDeRequerimiento::DetectorDeRequerimiento(){
     state=false;
@@ -27,11 +13,3 @@ void DetectorDeRequerimiento::setOn(){
 void DetectorDeRequerimiento::setOff(){
     state=false;
 }
-// std::ostream& operator<<(std::ostream &o, const DetectorDeRequerimiento &a) {
-//     if(a.state){
-//         return o<<("1");
-//     }
-//     else{
-//         return o << "0";
-//     }
-// }

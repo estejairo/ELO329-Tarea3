@@ -1,16 +1,7 @@
-#include "SemaforoDeGiro.cpp"
+#include "Controlador.h"
 #include <thread>
 #include <chrono>
 #include <exception>
-class Controlador
-{
-private:
-    SemaforoDeGiro semg;
-    DetectorDeRequerimiento *sensorinductivo;
-public:
-    Controlador(SemaforoDeGiro smg, DetectorDeRequerimiento *sensind);
-    void manageTraffic();
-};
 
 Controlador::Controlador(SemaforoDeGiro smg,DetectorDeRequerimiento *sensind){
     semg=smg;
