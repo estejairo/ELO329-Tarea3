@@ -8,23 +8,6 @@
 ////////////////////////////////////////////////////////////////
 #include "SemaforoDeGiro.h"
 
-class SemaforoDeGiro
-{
-private:
-    int greenT,blinkT;
-    bool red,green;
-    friend std::ostream& operator<<(std::ostream&, const SemaforoDeGiro&);
-public:
-    SemaforoDeGiro();
-    SemaforoDeGiro(int greenTime, int blinkingTime);
-    ~SemaforoDeGiro();
-    void turnRedLightOn();
-    void turnGreenLightOn();
-    void turnGreenLightOff();
-    int getGreenLightTime();
-    int getBlinkingTime();
-
-};
 SemaforoDeGiro::SemaforoDeGiro(){
 
 }
