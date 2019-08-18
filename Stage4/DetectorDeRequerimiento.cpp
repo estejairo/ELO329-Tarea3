@@ -1,17 +1,4 @@
-#include <iostream>
-
-
-class DetectorDeRequerimiento
-{
-private:
-    bool state;
-public:
-    DetectorDeRequerimiento();
-    bool isOn();
-    void setOn();
-    void setOff();
-
-};
+#include "DetectorDeRequerimiento.h"
 
 DetectorDeRequerimiento::DetectorDeRequerimiento(){
     state=false;

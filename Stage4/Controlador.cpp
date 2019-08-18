@@ -1,27 +1,7 @@
-#include "SemaforoDeGiro.cpp"
-#include "SemaforoP.cpp"
-#include "StreetTrafficLight.cpp"
+#include "Controlador.h"
 #include <thread>
 #include <chrono>
 #include <exception>
-
-class Controlador
-{
-private:
-    SemaforoDeGiro semg2,semg4;
-    DetectorDeRequerimiento *sensorinductivo,*botonpeaton;
-    SemaforoP semp1norteA,sempsportingB;
-    StreetTrafficLight sem5,sem3,sem1;
-    //bool serv_boton,serv_ind,serv_sport;
-    int state = 1;
-    int counter = 0;
-    int currentGreenTime=1;
-    int currentYellowTime=1;
-public:
-    Controlador(SemaforoP semaforopA, SemaforoP semaforopB, SemaforoDeGiro semaforog2, SemaforoDeGiro semaforog4, DetectorDeRequerimiento *botont, DetectorDeRequerimiento *sensorInd, StreetTrafficLight semaforo1, StreetTrafficLight semaforo3, StreetTrafficLight semaforo5);
-    ~Controlador();
-    void manageTraffic();
-};
 
 Controlador::Controlador(SemaforoP semaforopA, SemaforoP semaforopB, SemaforoDeGiro semaforog2, SemaforoDeGiro semaforog4, DetectorDeRequerimiento *botont, DetectorDeRequerimiento *sensorInd, StreetTrafficLight semaforo1, StreetTrafficLight semaforo3, StreetTrafficLight semaforo5){
     //Semaforos vehiculares

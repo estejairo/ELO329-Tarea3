@@ -2,9 +2,13 @@
 #include <string>
 #include <thread>
 #include <chrono>
-#include "SimuladorEntradas.cpp"
-#include "Controlador.cpp"
-#include "MyTimer.cpp"
+#include "SemaforoP.h"
+#include "SemaforoDeGiro.h"
+#include "StreetTrafficLight.h"
+#include "DetectorDeRequerimiento.h"
+#include "SimuladorEntradas.h"
+#include "Controlador.h"
+#include "MyTimer.h"
 
 using namespace std;
 int main (int argc, char* argv[]){

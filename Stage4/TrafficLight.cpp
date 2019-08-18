@@ -1,22 +1,5 @@
-enum TrafficLightState{STOP=0,TRANSITION=1,FOLLOW=2};
+#include "TrafficLight.h"
 
-class TrafficLight{
-    public:
-        TrafficLight();
-        TrafficLight(int ft, int tt);
-        ~TrafficLight();
-        void turnStop();
-        void turnTransition();
-        void turnFollow();
-        int getFollowTime();
-        int  getTransitionTime();
-        TrafficLightState getState(); 
-        friend std::ostream& operator<<(std::ostream& ,const TrafficLight &);
-    private:
-        int followTime;
-        int transitionTime;
-        TrafficLightState state;
-    };
 TrafficLight::~TrafficLight(){
     
 }
