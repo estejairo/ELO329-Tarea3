@@ -2,6 +2,7 @@
 #define CONTROLADOR_H_
 
 #include "SemaforoP.h"
+#include "DetectorDeRequerimiento.h"
 #include <thread>
 #include <chrono>
 #include <exception>

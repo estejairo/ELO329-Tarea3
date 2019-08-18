@@ -1,3 +1,5 @@
+INPUTFILE = entrada.txt
+
 CPP_SRCS += \
 ./MyTimer.cpp \
 ./SemaforoP.cpp \
@@ -30,7 +32,7 @@ CPP_DEPS += \
 all: TestStage2
 
 run: all
-	./TestStage2.out $(N) $(REDTIME)
+	./TestStage2.out $(INPUTFILE)
 	@echo "Programa ejecutado sin problemas."
 
 TestStage2: $(OBJS) 
